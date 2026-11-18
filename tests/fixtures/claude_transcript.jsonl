@@ -1,0 +1,5 @@
+{"type": "user", "timestamp": "2026-11-18T09:00:00Z", "message": {"role": "user", "content": "hello"}}
+{"type": "assistant", "timestamp": "2026-11-18T09:00:05Z", "message": {"usage": {"input_tokens": 1200, "output_tokens": 300, "cache_read_input_tokens": 5000, "cache_creation_input_tokens": 100}}}
+{"type": "assistant", "timestamp": "2026-11-16T09:00:05Z", "message": {"usage": {"input_tokens": 999999, "output_tokens": 999999}}}
+not json "usage"
+{"type": "assistant", "timestamp": "2026-11-18T10:30:00Z", "message": {"usage": {"input_tokens": 800, "output_tokens": 700}}}

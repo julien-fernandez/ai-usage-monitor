@@ -1,0 +1,22 @@
+services:
+  monitor:
+    build: .
+    image: ai-usage-monitor:latest
+    env_file: .env
+    environment:
+      AI_USAGE_DATA: /data
+    volumes:
+      - ai-usage-data:/data
+      - ./out:/out
+    entrypoint: ["sh", "-c"]
+    command: ["python -m ai_usage_monitor collect; python -m ai_usage_monitor report --out /out"]
+
+  demo:
+    build: .
+    image: ai-usage-monitor:latest
+    profiles: ["demo"]
+    volumes:
+      - ./out:/out
+
+volumes:
+  ai-usage-data:
